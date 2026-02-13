@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card" id="mainScreen">
+        <h2>Hola, Lucía ¿Quieres ser mi San Valentín de este año? 💘</h2>
+        <h4>No te va a quedar otra...</h4>
+        <button class="yes" onclick="sayYes()">Sí</button>
+        <button class="no" onclick="sayNo()">No</button>
+    </div>
+
+
+    <!-- Pantalla contraseña -->
+    <div class="card hidden" id="passwordScreen">
+        <h3>Confirma tu decisión 🔐</h3>
+        <h4>Eres mala, ya no me quieres... 😢</h4>
+        <p>Introduce la contraseña:</p>
+        <input type="password" id="password" />
+        <br />
+        <button onclick="checkPassword()">Confirmar</button>
+        <div class="error hidden" id="errorMsg"></div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal hidden" id="modal">
+        <div class="modal-content">
+            <img id="gifAmor" src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" alt="Amor" style="width:100%; border-radius:10px; margin-bottom:15px;" />
+            <h3>💖 Vamos, lo sabía 💖</h3>
+            <p>Sabía que dirías que sí 😌</p>
+            <button onclick="closeModal()">Cerrar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
